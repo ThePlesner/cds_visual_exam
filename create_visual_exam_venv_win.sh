@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-VENVNAME=visual_venv
+VENVNAME=venv
 
 python -m venv $VENVNAME
-source $VENVNAME/scripts/activate
-pip install --upgrade pip
+source $VENVNAME/Scripts/activate
+python get-pip.py
 
 test -f requirements.txt && pip install -r requirements.txt
 
-echo "$VENVNAME built"
+echo "build $VENVNAME"

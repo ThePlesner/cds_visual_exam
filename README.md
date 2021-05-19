@@ -28,7 +28,7 @@ Following is a guide on how to execute the code for each assignment.
 > `python image_search`
 - if you want the default arguments
  or 
-> `python image_search -t target/path -d data/path/ -o output/path` 
+> `python image_search -t target/path -d data/dir/path/ -o output/path` 
 - for custom data path. 
 - `output/` should now contain a csv-file with the result data in it and the terminal should've printed our the most similar image to the target. 
 ### Assignment 2
@@ -46,4 +46,7 @@ Following is a guide on how to execute the code for each assignment.
 > `python lr-mnist.py -d data/path`
 - For custom arguments.
 - For the neural network run the following command:
-> `python `
+> `python nn-mnist.py`
+- For the default arguments or
+> `python nn-mnist.py -d data/dir/path -e number_of_epochs`
+- In the `output/` directory there should now be two txt-files, one named `logress_metrics.txt` and one named `nn_metrics.txt` 

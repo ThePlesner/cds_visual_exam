@@ -2,6 +2,7 @@ import os
 import cv2
 import csv
 import argparse
+from pathlib import Path
 
 #Generates a histogram for an image (read by cv2.imread) and normalizes it using minmax
 def generate_histogram(image, normalize_function = cv2.NORM_MINMAX):
@@ -62,9 +63,9 @@ def main(target_image_path, data_dir_path, output_path, comparison_function = cv
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Compare histograms generated on a collection of images to find a target image based on said histograms.')
-    parser.add_argument('--target_image_path', default='./data/jpg/image_0001.jpg', help='path to the image that should be compared to the rest of the collection')
-    parser.add_argument('--data_dir_path', default='./data/jpg', help='path to the collection of images that the target should be compared with')
-    parser.add_argument('--output_path', default='./output/output.csv', help='the path to the directory the output should be placed in')
+    parser.add_argument('-t', '--target_image_path', default='./data/jpg/image_0001.jpg', help='path to the image that should be compared to the rest of the collection')
+    parser.add_argument('-d','--data_dir_path', default='./data/jpg', help='path to the collection of images that the target should be compared with')
+    parser.add_argument('-o','--output_path', default='./output/output.csv', help='the path to the directory the output should be placed in')
     args = parser.parse_args()
 
     main(args.target_image_path, args.data_dir_path, args.output_path)

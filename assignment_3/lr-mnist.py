@@ -19,7 +19,7 @@ def main(data_path):
     # Split data into test and training sets
     image_train, image_test, label_train, label_test = train_test_split(image, label, random_state=1111, test_size=0.2)
 
-    # classifier 
+    # create a classifier and fit it onto our training image and label
     classifier = LogisticRegression(penalty='none', 
                                     tol=0.1, 
                                     solver='saga',
@@ -40,7 +40,7 @@ def main(data_path):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description = "train logistic regression model on the full MNIST dataset and view the classifier metrics")
-    parser.add_argument("--data_path", default=Path('./data/'), type = Path, help = "path to where the MNIST csv-files dataset is saved or where to save it")
+    parser.add_argument("-d", "--data_path", default=Path('./data/'), type = Path, help = "path to where the MNIST csv-files dataset is saved or where to save it")
     args = parser.parse_args()
     
     main(data_path = args.data_path)

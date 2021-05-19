@@ -34,10 +34,10 @@ def main():
 
     # crop image with the region of interest as coordinates and save it in the output folder
     memorial_cropped = memorial_image[coordinates['y1']:coordinates['y2'], coordinates['x1']:coordinates['x2']]
-    cv2.imwrite(os.path.join(output_path, 'image_croppped.jpg'), memorial_cropped)
+    cv2.imwrite(os.path.join(output_path, 'image_cropped.jpg'), memorial_cropped)
 
     # blur the image to smooth out noice and irregular pixels
-    memorial_blurred = cv2.bilateralFilter(memorial_cropped, 5, 200, 100)
+    memorial_blurred = cv2.bilateralFilter(memorial_cropped, 8, 180, 200)
 
     # use the canny edge detector algorithm to find edges in the image
     memorial_canny = cv2.Canny(memorial_blurred, 50, 100)

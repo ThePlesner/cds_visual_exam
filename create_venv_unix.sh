@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VENVNAME=visual_venv
+VENVNAME=venv
 
 python3 -m venv $VENVNAME
 source $VENVNAME/bin/activate

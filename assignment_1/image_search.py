@@ -59,7 +59,7 @@ def main(target_image_path, data_dir_path, output_path, comparison_function = cv
                 most_similar_image['name'] = image_name
                 most_similar_image['chi_distance'] = chi_distance
 
-        print(f"The most similar image to {os.path.split(target_image_path)[1]} is the {most_similar_image['name']} with a score of {most_similar_image['chi_distance']}")
+        print(f"The most similar image to {os.path.split(target_image_path)[1]} is the {most_similar_image['name']} with a distance of {most_similar_image['chi_distance']}")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Compare histograms generated on a collection of images to find a target image based on said histograms.')

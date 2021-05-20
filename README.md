@@ -10,20 +10,31 @@ To be able to run this scripts in this portfolio you will need to have python 3 
 
 - Clone this repository
 - Open Bash and cd into the cloned repository.
-- While at the root of the directory run the following command
-  `./create_venv_win.sh`
+- While at the root of the directory run the following command:
+  ```
+  ./create_venv_win.sh
+  ```
   If you're on windows or
-  `./create_venv_unix.sh`
+  ```
+  ./create_venv_unix.sh
+  ```
   If you're on a unix-system
 
-**NOTE:** On unix-systems you might get permission denied when trying to run
+**NOTE:** On unix-systems you might get permission denied when trying to run the shell-script. To change this run the following command:
+```
+chmod +x create_venv_unix.sh
+```
 
 ## Running scripts
 
 To run scripts the virtual environment needs to be activated by running the following command:
-`source venv/Scripts/activate`
+```
+source venv/Scripts/activate
+```
 If you're on windows or
-`source venv/bin/activate`
+```
+source venv/bin/activate
+```
 If you're on a unix-system
 
 ## Assignments
